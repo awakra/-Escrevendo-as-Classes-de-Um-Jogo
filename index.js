@@ -8,24 +8,24 @@ class Hero {
 
   getAttackType() {
     switch (this.type) {
-      case "mago":
-        return "magia";
+      case "mage":
+        return "magic";
       case "ninja":
         return "shuriken";
-      case "monge":
-        return "artes marciais";
-      case "guerreiro":
-        return "espada";
+      case "monk":
+        return "martial arts";
+      case "warrior":
+        return "sword";
       default:
-        return "inválido";
+        return "invalid";
     }
   }
 
   attack() {
-    if (["mago", "ninja", "monge", "guerreiro"].includes(this.type)) {
-      return `O ${this.name} atacou usando ${this.attackType}`;
+    if (["mage", "ninja", "monk", "warrior"].includes(this.type)) {
+      return `${this.name} attacked using ${this.attackType}`;
     }
-    return `O ${this.name} não pode atacar!`;
+    return `${this.name} cannot attack!`;
   }
 }
 
@@ -36,4 +36,4 @@ function test(heroClass) {
   }
 }
 
-test(["mago", "guerreiro", "ninja", "monge", "bandido"]);
+test(["mage", "warrior", "ninja", "monk", "bandit"]);
